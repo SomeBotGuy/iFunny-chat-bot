@@ -119,7 +119,7 @@ class iFunnyBot:
         mime = ""
 
         if fileurl.endswith(".jpg") or fileurl.endswith(".jpeg") or fileurl.endswith(".jpe"):
-            mine = "image/jpeg"
+            mime = "image/jpeg"
 
         elif fileurl.endswith(".png"):
             mime = "image/png"
