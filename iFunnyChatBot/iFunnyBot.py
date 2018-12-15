@@ -112,9 +112,6 @@ class iFunnyBot:
 
     def sendfile(self, channel, fileurl):
 
-        if not fileurl.startswith('https://'):
-            print("Wrong url. Must be of type https://")
-            return
 
         mime = ""
 
@@ -146,11 +143,11 @@ class iFunnyBot:
             print("Wrong file type")
             return
 
-
+#MIME is commented out to help avoid blackhole image errors. if you experience errors with this uncommon it
 
         jssend = json.dumps({'channel_url':channel,'name':'botimage','req_id':str(int(round(time.time() * 1000))),
                                 'thumbnails':[{'height':780,'width':780,'real_height':780,'real_width':780,
-                                'url':fileurl}],'type':mime,
+                                'url':fileurl}],#'type':mime,
                                  'url':fileurl},separators=(',', ':'))
         tosend = 'FILE{}\n'.format(jssend)
         self.websoc.send(tosend)
