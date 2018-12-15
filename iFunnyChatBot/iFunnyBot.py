@@ -143,7 +143,7 @@ class iFunnyBot:
             print("Wrong file type")
             return
 
-#MIME is commented out to help avoid blackhole image errors. if you experience errors with this uncommon it
+#MIME is commented out to help avoid blackhole image errors. if you experience errors with this uncomment it
 
         jssend = json.dumps({'channel_url':channel,'name':'botimage','req_id':str(int(round(time.time() * 1000))),
                                 'thumbnails':[{'height':780,'width':780,'real_height':780,'real_width':780,
